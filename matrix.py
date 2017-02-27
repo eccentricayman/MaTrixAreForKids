@@ -17,14 +17,26 @@ def print_matrix( matrix ):
     print retStr[:-1]
     
 def ident( matrix ):
-    pass
+    for row in range(len(matrix)):
+        for column in range(len(matrix[row])):
+            if row == col:
+                matrix[row][column] = 1
+            else:
+                matrix[row][column] = 0
 
 def scalar_mult( matrix, s ):
-    pass
+    for row in range(len(matrix)):
+        for column in range(len(matrix)):
+            matrix[row][column] *= s
 
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    for column in range(len(m2[0])):
+        for row in range(len(m2)):
+            total = 0;
+            for i in range(len(m1[row])):
+                total += m1[row][i] * m2[i][column]
+            m2[row][column] = total
 
 def new_matrix(rows = 4, cols = 4):
     m = []
