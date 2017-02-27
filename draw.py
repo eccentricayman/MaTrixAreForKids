@@ -3,14 +3,28 @@ from matrix import *
 
 
 def draw_lines( matrix, screen, color ):
-    pass
-
+    #iter ova columnz
+    for i in range(len(matrix[0])):
+        x0 = matrix[0][i]
+        x1 = matrix[0][i + 1]
+        y0 = matrix[1][i]
+        y1 = matrix[1][i + 1]
+        draw_line(x0, y0, x1, y1, screen, color)
+        
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    add_point(matrix, x0, y0, z0)
+    add_point(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
-    pass
-
+    for i in range(len(matrix)):
+        if i == 0:
+            matrix[i].append(x)
+        elif i == 1:
+            matrix[i].append(y)
+        elif i == 2:
+            matrix[i].append(z)
+        else:
+            matrix[i].append(1)
 
 
 
