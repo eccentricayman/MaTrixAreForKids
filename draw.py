@@ -4,7 +4,7 @@ from matrix import *
 
 def draw_lines( matrix, screen, color ):
     #iter ova columnz
-    for i in range(len(matrix[0])):
+    for i in range(len(matrix[0]) - 1):
         x0 = matrix[0][i]
         x1 = matrix[0][i + 1]
         y0 = matrix[1][i]

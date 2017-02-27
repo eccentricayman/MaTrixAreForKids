@@ -19,7 +19,7 @@ def print_matrix( matrix ):
 def ident( matrix ):
     for row in range(len(matrix)):
         for column in range(len(matrix[row])):
-            if row == col:
+            if row == column:
                 matrix[row][column] = 1
             else:
                 matrix[row][column] = 0
