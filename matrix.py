@@ -33,7 +33,7 @@ def scalar_mult( matrix, s ):
 def matrix_mult( m1, m2 ):
     for column in range(len(m2[0])):
         for row in range(len(m2)):
-            total = 0;
+            total = 0
             for i in range(len(m1[row])):
                 total += m1[row][i] * m2[i][column]
             m2[row][column] = total
@@ -46,4 +46,3 @@ def new_matrix(rows = 4, cols = 4):
             m[c].append( 0 )
     return m
 
-print_matrix(new_matrix())
