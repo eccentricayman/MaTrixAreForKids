@@ -28,7 +28,7 @@ print_matrix(matrix)
 
 print "adding stuff 2 matrix"
 for i in range(500):
-    add_edge(matrix, int(math.sin(i / (2 * math.pi))) ** i, int(math.cos(i / (2 * math.pi))) ** i, 0, int(math.tan(i / (2 * math.pi))) ** i, int(math.atan(i / (2 * math.pi))) ** i, 0)
+    add_edge(matrix, int(math.sin(i / (2 * math.pi))) * i, int(math.cos(i / (2 * math.pi))) * i, 0, int(math.tan(i / (2 * math.pi))) * i, int(math.atan(i / (2 * math.pi))) * i, 0)
 
 draw_lines( matrix, screen, color )
 display(screen)
